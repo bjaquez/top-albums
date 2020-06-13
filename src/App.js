@@ -1,26 +1,42 @@
-import React from 'react';
+import React, { Component }  from 'react';
 import logo from './logo.svg';
 import './App.css';
+import albums from './top-albums';
+import AlbumCard from './components/AlbumCard';
+import Wrapper from "./components/Wrapper";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class Apps extends Component{
+  state = {  
+    topAlbums: [],
+  };
+
+  componentDidMount(){
+    albums().then(value => 
+      {
+        this.setState({topAlbums: value.feed.entry})
+        console.log(value);
+      });
+  }
+  
+
+ render(){
+   return(
+     <Wrapper>
+
+     {this.state.topAlbums.map(album => (
+       <AlbumCard
+          id = {album.id.attributes['im:id']}
+          name = {album['im:name'].label}
+          artist = {album['im:artist'].label}
+          image = {album['im:image'][2].label}
+       />
+       ) )} 
+       </Wrapper>
+   );
+ } 
 }
 
-export default App;
+
+
+export default Apps;
