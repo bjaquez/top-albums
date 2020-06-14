@@ -1,6 +1,9 @@
 import React from "react";
 import './AlbumCard.css';
 
+
+
+
 const AlbumCard = props => (
     <div className="card" onClick={() => props.showSelectedAlbum(props.id)}>
       <div className="img-container">
@@ -13,9 +16,7 @@ const AlbumCard = props => (
         <h4>
             {props.artist}
         </h4>
-        {/* <span onClick={() => props.addToFavorites(props.id)} className="remove">
-      &hearts;
-    </span> */}
+        <p>{props.showHeart(props.id)}</p>    
       </div>
 
     </div>

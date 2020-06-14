@@ -24,3 +24,18 @@
       max-width: 100%;
       height: auto;
   } 
+
+  .red-heart{
+    color: red;
+    font-size: 30px;
+  }
+
+  .white-heart{
+    color: white;
+    font-size: 30px;
+  }
+
+  .white-heart:hover{
+    transform: scale(1.5);
+  }
+

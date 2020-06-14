@@ -10,7 +10,8 @@ class Apps extends Component{
   state = {  
     topAlbums: [],
     favorites: [],
-    selectedAlbumDets: []
+    selectedAlbumDets: [],
+    favoriteAlbums: []
   };
 
   componentDidMount(){
@@ -19,22 +20,50 @@ class Apps extends Component{
         this.setState({topAlbums: value.feed.entry})
         console.log(value);
       });
-      var fave = [1, 2, 3,];
-      this.addToFavorites(fave);
-      
+
+    var storedFaves = JSON.parse(localStorage.getItem("favoriteAlbums"));
+    //var parsedFaves = JSON.parse(storedFaves);
+    var currentFaves = this.state.favoriteAlbums;  
+    console.log(currentFaves)  
+    console.log(storedFaves)
+    if(storedFaves != null){
+      //this.state.favoriteAlbums.push(parsedFaves);
+      this.setState({favoriteAlbums: this.state.favoriteAlbums.concat(storedFaves)});  
+    }
 
   }
   
-  showSelectedAblum = (id) =>{
+  showSelectedAblum = (id) => {
     var selected = this.state.topAlbums.filter(album => album.id.attributes['im:id'] == id);
     this.setState({selectedAlbumDets: selected});
     window.scrollTo(0, 0)
   }
 
 
-  addToFavorites(id){
-    //localStorage.setItem("favoriteAlbums", JSON.stringify(arr) )
+  addToFavorites = (id) => {
+    var newFaves = this.state.favoriteAlbums.concat(id);
+    this.setState({favoriteAlbums: newFaves});
+    localStorage.setItem("favoriteAlbums", JSON.stringify(newFaves) )
 
+  }
+
+  showHeart(id){
+    var storedfaves = JSON.parse(localStorage.getItem("favoriteAlbums"));    
+    if(storedfaves.includes(id)){
+      return (<p className="red-heart">&hearts;</p>)
+    }else {
+      return(<p onClick = {() => this.addToFavorites(id)} className="white-heart">&hearts;</p>)
+    }
+  }
+
+  showAddToFaveBtn(id){
+    var storedfaves = JSON.parse(localStorage.getItem("favoriteAlbums"));    
+    if(!storedfaves.includes(id)){
+      return(<button onClick = {() => this.addToFavorites(id)} className="fave-btn"> Add To Favorites</button>)
+    }else{
+      return(<p className="red-heart" >&hearts;</p>)
+
+    }
   }
 
  render(){
@@ -52,6 +81,8 @@ class Apps extends Component{
       yearPub = {album.rights.label}
       link = {album.id.label}
       release = {album['im:releaseDate'].label}
+      showfavebtn = {this.showAddToFaveBtn}
+      addToFavorites = {this.addToFavorites}
       />
       ))}
 
@@ -65,6 +96,7 @@ class Apps extends Component{
           image = {album['im:image'][2].label}
           addToFavorites = {this.addToFavorites}
           showSelectedAlbum = {this.showSelectedAblum}
+          showHeart = {this.showHeart}
        />
        ))} 
        </CardWrapper>

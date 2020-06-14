@@ -24,6 +24,7 @@ const AlbumDetails = props => (
             <p>{props.release}</p>
           </div>
       </div>
+<div>{props.showfavebtn(props.id)}</div>
 
 
     </div>
