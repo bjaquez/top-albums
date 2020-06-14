@@ -1,0 +1,26 @@
+.selected-card{
+    width:90%;
+    margin:2em;
+    display: flex;
+    border: 1px solid #F3EEE8;
+    border-radius: 5px;
+    background-color: #F3EEE8;
+}
+
+.selected-img-container{
+    width:30%;
+    text-align: center;
+    padding: 1em
+}
+.selected-card-content{
+    width:60%;
+    text-align: left;
+    display:flex;
+}
+
+.titles{
+    margin-right: 1em
+}
+.selected-img{
+    width:60%
+}
