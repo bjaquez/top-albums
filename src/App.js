@@ -103,7 +103,7 @@ class Apps extends Component{
       price = {album['im:price'].label}
       yearPub = {album.rights.label}
       link = {album.id.label}
-      release = {album['im:releaseDate'].label}
+      release = {album['im:releaseDate'].attributes.label}
       showfavebtn = {this.showAddToFaveBtn}
       addToFavorites = {this.addToFavorites}
       />
