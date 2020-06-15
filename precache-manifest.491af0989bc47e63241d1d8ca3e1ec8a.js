@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a04148c04a3a0c33c8bc3edb4485f6c9",
+    "revision": "66f68597fe0845379fde62323da9c9cf",
     "url": "/top-albums/index.html"
   },
   {
-    "revision": "e4cb12ec0b49fc0ac876",
-    "url": "/top-albums/static/css/main.3108c3f5.chunk.css"
+    "revision": "9b301c22139145f9ee77",
+    "url": "/top-albums/static/css/main.060ea437.chunk.css"
   },
   {
     "revision": "1a3914c3c335e7138270",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/top-albums/static/js/2.e9e0acee.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e4cb12ec0b49fc0ac876",
-    "url": "/top-albums/static/js/main.9424bab7.chunk.js"
+    "revision": "9b301c22139145f9ee77",
+    "url": "/top-albums/static/js/main.012c5875.chunk.js"
   },
   {
     "revision": "e0968bacd63ac354dc26",
