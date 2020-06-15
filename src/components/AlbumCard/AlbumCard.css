@@ -6,7 +6,7 @@
     position: relative;
     width: 225px;
     text-align: center;
-    background-color: #F3EEE8
+    background-color: #d4ecec
   }
 
   .img-container {
@@ -33,6 +33,7 @@
   .white-heart{
     color: white;
     font-size: 30px;
+    margin: 0px;
   }
 
   .white-heart:hover{

@@ -1,10 +1,10 @@
 .selected-card{
-    width:90%;
+    width:95%;
     margin:2em;
     display: flex;
     border: 1px solid #F3EEE8;
     border-radius: 5px;
-    background-color: #F3EEE8;
+    background-color: #AEC9C9
     
 }
 
@@ -27,6 +27,6 @@
 }
 
 .fave-btn{
-    margin-top:80%;
-    
+    margin-top:70%;
+    margin-right: 20%;
   }
