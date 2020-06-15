@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7183604b04d1877f7e4e53421c4d80c4",
+    "revision": "a04148c04a3a0c33c8bc3edb4485f6c9",
     "url": "/top-albums/index.html"
   },
   {
-    "revision": "fcfc7ee6e19026c46f58",
-    "url": "/top-albums/static/css/main.242831dc.chunk.css"
+    "revision": "e4cb12ec0b49fc0ac876",
+    "url": "/top-albums/static/css/main.3108c3f5.chunk.css"
   },
   {
     "revision": "1a3914c3c335e7138270",
@@ -16,15 +16,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/top-albums/static/js/2.e9e0acee.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fcfc7ee6e19026c46f58",
-    "url": "/top-albums/static/js/main.2020731f.chunk.js"
+    "revision": "e4cb12ec0b49fc0ac876",
+    "url": "/top-albums/static/js/main.9424bab7.chunk.js"
   },
   {
     "revision": "e0968bacd63ac354dc26",
     "url": "/top-albums/static/js/runtime-main.e9dcb193.js"
-  },
-  {
-    "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
-    "url": "/top-albums/static/media/logo.5d5d9eef.svg"
   }
 ]);
